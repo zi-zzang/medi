@@ -1,0 +1,199 @@
+@charset "utf-8";
+#wrap{
+    min-width: 960px;
+}
+.in_wrap{
+    /* outline: 1px solid red; */
+    width: 960px;
+    margin: auto;
+    padding: 0 16px;
+    /* text-align: center; */
+}
+#top1{
+    text-align: center;
+    background-image: url(../images/top_bg_bar.png);
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat-x;
+}
+#top2 .in_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 26px;
+    text-align: center;
+}
+#top2 ul{
+    display: flex;
+    /* justify-content: space-around; */
+}
+#top2 ul li{
+    padding: 0 16px;
+}
+#top2 ul li a::after{
+    display: block;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background:linear-gradient(to right,#3c8f46,#1650a5);
+    margin-top: 4px;
+    transition: 0.3s;
+}
+#top2 ul li a:hover::after{
+    width: 100%;
+}
+#top2 .bars{
+    height: 8px;
+    background-color: #8ac646;
+    box-shadow: 0 3px 3px gray;
+    display: flex;
+}
+#top2 .bars > div{
+    height: 8px;
+    /* float: left; */
+}
+#top2 .bars .bar1{
+    width: 30%;
+}
+#top2 .bars .bar2{
+    width: 50%;
+    background:linear-gradient(to right,#1f7d47,#3c8f46);
+}
+#top2 .bars .bar3{
+    width: 20%;
+    background:linear-gradient(to right,#1650a5,#0c81c8);
+}
+section .in_wrap{
+    position: relative;
+}
+section .con1{
+    text-align: right;
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+section .con2{
+    position: absolute;
+    top: 42px;
+    left: 16px;
+    font-size: 12px;
+}
+.tabmenu{
+    width: 290px;
+}
+.tabmenu .tits{
+    border-bottom: 1px solid #18499f;
+}
+.tabmenu .tits a{
+    display: inline-block;
+    background-color: #e8e9e9;
+    color: #787878;
+    width: 82px;
+    text-align: center;
+    font-weight: bold;
+    padding: 6px;
+    border: 1px solid #e0e0e0;
+}
+.tabmenu .tits a.active{
+    background-color: #fff;
+    border: 1px solid #18499f;
+    color: #18499f;
+    border-bottom: 1px solid #fff;
+    padding: 7px 0;
+    position: relative;
+    top: 1px;
+}
+.tabmenu .con{
+    margin-top: 18px;
+}
+.tabmenu .con ul li{
+    background-image: url(../images/bul.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding: 5px;
+    
+}
+.tabmenu .con ul li:hover{
+    /* background-color: #eee; */
+    font-weight: 600;
+}
+.tabmenu .con ul li a{
+    display: flex;
+}
+.tabmenu .con ul li a span.b_tit{
+    width: 205px;
+    padding-right: 14px;
+    color: #585858;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    /* letter-spacing: -1px;  자간 줄이기*/ 
+}
+.tabmenu .con ul li a span.b_date{
+    color: #888;
+}
+.tabmenu .con ul li.more{
+    color: #1650a5;
+    background-image: none;
+    position: absolute;
+    top: 6px;
+    right: 0;
+}
+#news{
+    display: none;
+}
+section .con3{
+    position: absolute;
+    top: 280px;
+    left: 16px;
+}
+section .con4{
+    position: absolute;
+    top: 144px;
+    right: 0;
+}
+section .con5{
+    position: absolute;
+    top: 54px;
+    right: 100px;
+    animation: float_ani 2s infinite alternate;
+}
+@keyframes float_ani {
+    from{
+        top: 54px;
+    }
+    to{
+        top: 100px;
+    }
+}
+
+footer{
+    height: 100px;
+}
+footer .in_wrap{
+    display: flex;
+    justify-content: space-between;
+}
+footer .info .fam{
+    text-align: right;
+    position: relative;
+}
+footer .info .fam img{
+    cursor: pointer;
+}
+footer .info .fam .fam_list{
+    border: 1px solid #eee;
+    text-align: center;
+    padding: 4px 0;
+    font-size: 12px;
+    color: #888;
+    display: none;
+
+    position: absolute;
+    top: 20px;
+    right: 8px;
+}
+footer .info .fam .fam_list li a{
+    padding: 4px 16px;
+}
+footer .info .fam .fam_list li a:hover{
+    background-color: #eee;
+}
